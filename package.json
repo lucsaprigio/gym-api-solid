@@ -15,6 +15,7 @@
   "devDependencies": {
     "@eslint/js": "9.16.0",
     "@rocketseat/eslint-config": "2.2.2",
+    "@types/bcryptjs": "2.4.6",
     "@types/node": "22.10.1",
     "@typescript-eslint/eslint-plugin": "8.17.0",
     "@typescript-eslint/parser": "8.17.0",
@@ -29,6 +30,7 @@
   "dependencies": {
     "@prisma/client": "6.0.1",
     "03-api-solid": "file:",
+    "bcryptjs": "2.4.3",
     "dotenv": "16.4.6",
     "fastify": "5.1.0",
     "zod": "3.23.8"
