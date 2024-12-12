@@ -53,7 +53,7 @@ describe('Fetch check-in history use case', () => {
 
         expect(checkIns).toHaveLength(2);
         expect(checkIns).toEqual([
-            expect.objectContaining({ gymId: 'gym-21', }),
+            expect.objectContaining({ gymId: 'gym-21', }), // Espera que o objeto contenha a propriedade gymId com o valor 'gym-21'
             expect.objectContaining({ gymId: 'gym-22', })
         ])
     })
