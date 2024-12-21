@@ -15,7 +15,6 @@ function generateDatabaseURL(schema: string) {
     }
 
     const url = new URL(process.env.DATABASE_URL);
-
     url.searchParams.set('schema', schema);
 
     execSync('npx prisma migrate deploy'); // Deploy - pula a etapa de confirmação
@@ -32,11 +31,10 @@ export default <Environment><unknown>{
 
         process.env.DATABASE_URL = databaseURL;
 
-
-
         return {
             async teardown() {
                 await prisma.$executeRawUnsafe(`DROP SCHEMA IF EXISTS "${schema}" CASCADE`);
+                await prisma.$disconnect();
             }
         }
     },
